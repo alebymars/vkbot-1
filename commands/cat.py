@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import command_system
 import vkapi
 
