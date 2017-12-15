@@ -1,6 +1,3 @@
-
-# A very simple Flask Hello World app for you to get started with...
-
 from flask import Flask, request, json
 from settings import *
 import messageHandler
@@ -23,6 +20,7 @@ def processing():
     elif data['type'] == 'message_new':
         messageHandler.create_answer(data['object'], token)
         return 'ok'
+
 
 if __name__ == "__main__":
     app.run("0.0.0.0")
