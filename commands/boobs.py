@@ -9,7 +9,6 @@ def boobs():
    return message, attachment
 
 boobs_command = command_system.Command()
-
-boobs_command.keys = ['сиськи', 'грудь', 'сосок', 'boobs', 'sexy', 'girl', 'идея для фото']
+boobs_command.keys = ['идея для фото']
 boobs_command.description = 'Пришлю картинку с идеей для фото'
 boobs_command.process = boobs
