@@ -51,7 +51,7 @@ def get_answer(body, token):
                command = c
                key = k
                if distance == 0:
-                   message, attachment = c.process()
+                   message, attachment = c.process(token)
                    return message, attachment
    if distance < len(body)*0.4:
        message, attachment = command.process(token)
