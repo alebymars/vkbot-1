@@ -54,7 +54,7 @@ def get_answer(body):
                    return message, attachment
    if distance < len(body)*0.4:
        message, attachment = command.process()
-       message = 'Я понял ваш запрос как "%s"\n\n' % key + message
+       message = u'Я понял ваш запрос как "%s"\n\n' % key + message
    return message, attachment
 
 
