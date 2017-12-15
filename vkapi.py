@@ -18,5 +18,6 @@ def send_message(user_id, token, message, attachment=""):
     api.messages.send(access_token=token, user_id=str(user_id), message=message, attachment=attachment)
 
 def post_poll(token, message):
-    api.wall.post(access_token=token, owner_id=112285736,message="poll")
+    pass
+    #api.wall.post(access_token=token, owner_id=112285736,message="poll")
 
