@@ -3,7 +3,7 @@ import command_system
 import vkapi
 
 
-def boobs():
+def boobs(token):
    attachment = vkapi.get_random_wall_picture(-58312088)
    message = 'Вот тебе идея для фото ;)\nВ следующий раз я пришлю другую.'
    return message, attachment

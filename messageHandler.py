@@ -4,6 +4,7 @@ import os
 import importlib
 from command_system import command_list
 
+admin_id = 143794617
 
 def damerau_levenshtein_distance(s1, s2):
    d = {}
@@ -36,7 +37,7 @@ def load_modules():
        importlib.import_module("commands." + m[0:-3])
 
 
-def get_answer(body):
+def get_answer(body, token):
    message = "Sorry dont understand"
    attachment = ''
    distance = len(body)
@@ -53,7 +54,7 @@ def get_answer(body):
                    message, attachment = c.process()
                    return message, attachment
    if distance < len(body)*0.4:
-       message, attachment = command.process()
+       message, attachment = command.process(token)
        message = u'Я понял ваш запрос как "%s"\n\n' % key + message
    return message, attachment
 
@@ -62,6 +63,5 @@ def get_answer(body):
 def create_answer(data, token):
    load_modules()
    user_id = data['user_id']
-   message, attachment = get_answer(data['body'].lower())
+   message, attachment = get_answer(data['body'].lower(), token)
    vkapi.send_message(user_id, token, message, attachment)
-

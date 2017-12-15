@@ -2,7 +2,7 @@
 import command_system
 
 
-def info():
+def info(token):
     message = ''
     for c in command_system.command_list:
         message += c.keys[0] + ' - ' + c.description + '\n'

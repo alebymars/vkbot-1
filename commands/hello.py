@@ -2,7 +2,7 @@
 import command_system
 
 
-def hello():
+def hello(token):
    message = u'Привет, друг!\nЯ новый чат-бот.'
    return message, ''
 
