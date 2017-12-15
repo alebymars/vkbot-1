@@ -34,6 +34,8 @@ def load_modules():
    modules = filter(lambda x: x.endswith('.py'), files)
    for m in modules:
        importlib.import_module("commands." + m[0:-3])
+
+
 def get_answer(body):
    message = "Sorry dont understand"
    attachment = ''
