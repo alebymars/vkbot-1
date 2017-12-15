@@ -6,6 +6,7 @@ import vkapi
 def poll(token):
     attachment = ""
     message = 'Сейчас всё будет сделано'
+    vkapi.post_poll(token=token, message="poll_message")
     return message, attachment
 
 poll_command = command_system.Command()
