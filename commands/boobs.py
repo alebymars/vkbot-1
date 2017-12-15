@@ -4,7 +4,7 @@ import vkapi
 
 
 def boobs():
-   attachment = vkapi.get_random_wall_picture(-35001375)
+   attachment = vkapi.get_random_wall_picture(-58312088)
    message = 'Вот тебе идея для фото ;)\nВ следующий раз я пришлю другую.'
    return message, attachment
 
